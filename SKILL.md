@@ -5,16 +5,16 @@ description: "Analyse an HKDSE or senior-secondary chemistry question paper and 
 
 # HKDSE Chemistry Paper Mapper
 
-Use this skill to analyse a senior-secondary / HKDSE Chemistry assessment paper and map every question to the supplied HKDSE Chemistry syllabus chapters and topics.
+Use this skill to analyse a senior-secondary / HKDSE Chemistry assessment paper and map every question to HKDSE Chemistry syllabus chapters and topics.
 
 ## Inputs
 
-Expect one or both of:
+Expect:
 
 - A question paper, commonly `.docx`, `.pdf`, image pages, or pasted text.
-- A syllabus/chapter map supplied by the user. Treat it as authoritative for chapter names, topic names, branch labels, and scope.
+- Optionally, a syllabus/chapter map supplied by the user.
 
-If no syllabus/chapter map is supplied, ask the user to provide one before doing final mapping. Do not invent chapter titles.
+Use a user-supplied syllabus/chapter map as authoritative when it conflicts with the built-in reference below. If no syllabus/chapter map is supplied, use the built-in reference chapter map. Do not invent chapter titles.
 
 ## Workflow
 
@@ -25,7 +25,7 @@ If no syllabus/chapter map is supplied, ask the user to provide one before doing
 
 2. Extract the syllabus taxonomy.
    - Identify official HKDSE topic number/name, chapter number/title, branch, and scope bullets.
-   - Use the supplied chapter map as the naming authority.
+   - Use the supplied chapter map as the naming authority when present; otherwise use the built-in reference chapter map.
    - If chapter ranges have no individual titles, keep the range label and do not create unofficial titles.
 
 3. Classify each question.
@@ -80,6 +80,341 @@ Then provide:
 - Industrial rate equations, activation energy, catalysis, green chemistry: Topic XIII, Ch. 50-55.
 - Materials, polymeric materials, alloys, nanomaterials, biodegradable plastics: Topic XIV, Ch. 56-60.
 - Chemical tests, separations, quantitative analysis, instrumental analysis: Topic XV, Ch. 61-65.
+
+## Reference Chapter Map
+
+Use this map as the fallback chapter taxonomy when the user does not provide a separate syllabus/chapter map.
+
+### Topic I - Planet Earth
+
+Chapters 1-4: Individual titles not provided
+
+Branch: Inorganic Chemistry
+
+Scope:
+- Atmosphere, ocean, rocks and minerals
+- Elements, compounds and mixtures
+- Physical and chemical changes
+- Separation methods
+- Solutions and crystallisation
+- Word equations
+- Tests for selected chemical species
+- Extraction of useful materials
+- Calcium carbonate and related reactions
+
+Do not invent titles for Chapters 1-4.
+
+### Topic II - Microscopic World I
+
+Chapter 5: Atomic Structure
+
+Chapter 6: Periodic Table
+
+Chapter 7: Ionic and Metallic Bonding
+
+Chapter 8: Covalent Bonding
+
+Chapter 9: Structure and Properties
+
+Branches:
+- Inorganic Chemistry
+- Structural Chemistry
+
+Scope:
+- Atomic structure and isotopes
+- Electronic arrangements
+- Periodic Table organisation and trends
+- Ionic, covalent and metallic bonding
+- Chemical formulae
+- Relationships between structures, properties and uses
+
+### Topic III - Metals
+
+Chapter 10: Extraction of Metals
+
+Chapter 11: Metal Reactivity
+
+Chapter 12: Reacting Masses
+
+Chapter 13: Corrosion Prevention
+
+Branch: Inorganic Chemistry
+
+Scope:
+- Metal extraction
+- Reactivity series
+- Metal reactions
+- Displacement reactions
+- Chemical and ionic equations
+- Mole calculations
+- Reacting masses
+- Empirical formulae
+- Corrosion and prevention
+
+### Topic IV - Acids and Bases
+
+Chapter 14: Acids and Bases
+
+Chapter 15: Concentrations
+
+Chapter 16: Indicators
+
+Chapter 17: Strength of Acids
+
+Chapter 18: Salt Preparation
+
+Chapter 19: Titrations
+
+Branch: Inorganic Chemistry
+
+Scope:
+- Properties and reactions of acids and alkalis
+- pH and indicators
+- Strong and weak acids
+- Molar concentration
+- Neutralisation
+- Salt preparation
+- Standard solutions
+- Acid-base titrations
+- Volumetric calculations
+
+### Topic V - Fossil Fuels and Carbon Compounds
+
+Chapter 20: Fossil Fuels
+
+Chapter 21: Homologous Series
+
+Chapter 22: Alkanes and Alkenes
+
+Chapter 23: Addition Polymers
+
+Branch: Organic Chemistry
+
+Scope:
+- Petroleum fractions
+- Environmental effects of fossil fuels
+- Homologous series
+- Formulae and systematic names
+- Alkanes and alkenes
+- Combustion, substitution, cracking and addition
+- Addition polymerisation
+
+### Topic VI - Microscopic World II
+
+Chapter 24: Molecular Shapes
+
+Chapter 25: Polarity
+
+Chapter 26: Intermolecular Forces
+
+Chapter 27: Ice
+
+Branch: Structural Chemistry
+
+Scope:
+- Electronegativity
+- Bond and molecular polarity
+- Molecular shapes
+- Van der Waals' forces
+- Hydrogen bonding
+- Structure and properties of ice
+- Selected non-octet molecules
+
+### Topic VII - Redox Reactions, Chemical Cells and Electrolysis
+
+Chapter 28: Introduction to Chemical Cells
+
+Chapter 29: Simple Chemical Cells
+
+Chapter 30: Redox Reactions
+
+Chapter 31: Advanced Concepts in Simple Chemical Cells
+
+Chapter 32: Electrolysis
+
+Branch: Physical Chemistry
+
+Scope:
+- Oxidation and reduction
+- Oxidation numbers
+- Oxidising and reducing agents
+- Redox equations
+- Chemical cells
+- Electrode reactions
+- Electrochemical series
+- Electrolysis
+- Preferential discharge
+
+### Topic VIII - Chemical Reactions and Energy
+
+Chapter 33: Introduction to Thermodynamics
+
+Chapter 34: Typical Enthalpy Changes
+
+Chapter 35: Hess's Cycle
+
+Branch: Physical Chemistry
+
+Scope:
+- Conservation of energy
+- Exothermic and endothermic reactions
+- Enthalpy changes
+- Calorimetry
+- Standard enthalpy changes
+- Hess's law
+- Enthalpy cycles and calculations
+
+### Topic IX - Rate of Reaction
+
+Chapter 36: Measuring Rates of Reaction
+
+Chapter 37: Factors Affecting Rates of Reaction
+
+Chapter 38: Molar Volume of Gases
+
+Branch: Physical Chemistry
+
+Scope:
+- Measuring reaction rates
+- Rate graphs
+- Factors affecting rates
+- Collision theory
+- Catalysts
+- Experimental design
+- Molar volume of gases
+- Gas stoichiometry
+
+### Topic X - Chemical Equilibrium
+
+Chapter 39: Dynamic Equilibrium
+
+Chapter 40: Equilibrium Constant
+
+Chapter 41: Le Chatelier's Principle
+
+Branches:
+- Physical Chemistry
+- Inorganic Chemistry
+
+Scope:
+- Reversible reactions
+- Dynamic equilibrium
+- Equilibrium constant Kc
+- Kc calculations
+- Effects of concentration and temperature
+- Equilibrium shifts
+- Industrial applications
+
+### Topic XI - Chemistry of Carbon Compounds
+
+Chapter 42: Advanced Homologous Series
+
+Chapter 43: Isomerism
+
+Chapter 44: Typical Reactions of Functional Groups
+
+Chapter 45: Interconversions of Functional Groups
+
+Chapter 46: Important Organic Substances
+
+Branch: Organic Chemistry
+
+Scope:
+- Organic nomenclature
+- Structural, cis-trans and optical isomerism
+- Functional groups
+- Reagents, conditions and observations
+- Organic conversions
+- Identification of compounds
+- Aspirin, detergents, nylon and polyesters
+
+### Topic XII - Patterns in the Chemical World
+
+Chapter 47: Physical Properties of Period 2 Elements
+
+Chapter 48: Acid-Base Properties of Period 3 Element Oxides
+
+Chapter 49: Transition-Metal Properties
+
+Branch: Inorganic Chemistry
+
+Scope:
+- Periodic trends
+- Bonding and structure
+- Melting points and conductivity
+- Period 3 oxides
+- Acid-base properties
+- Transition-metal colours
+- Variable oxidation states
+- Catalytic properties
+
+### Topic XIII - Industrial Chemistry
+
+Chapters 50-51: Rate Equations
+
+Chapter 52: Activation Energy
+
+Chapter 53: Catalysis
+
+Chapter 54: Industrial Processes
+
+Chapter 55: Green Chemistry
+
+Branch: Industrial Chemistry
+
+Scope:
+- Rate equations and reaction orders
+- Rate constants
+- Activation energy
+- Catalysis
+- Industrial processes
+- Yield and atom economy
+- Process optimisation
+- Green chemistry
+
+### Topic XIV - Materials Chemistry
+
+Chapters 56-60: Individual titles not provided
+
+Branch: Materials Chemistry
+
+Scope:
+- Cellulose and chitin
+- Synthetic polymers
+- Thermoplastics and thermosetting plastics
+- Polymeric biomaterials
+- Biodegradable plastics
+- Alloys
+- Liquid crystals
+- Nanomaterials
+- Green materials production
+
+Do not invent titles for Chapters 56-60.
+
+### Topic XV - Analytical Chemistry
+
+Chapter 61: Identification Tests
+
+Chapter 62: Separation Techniques
+
+Chapter 63: Quantitative Analysis
+
+Chapters 64-65: Instrumental Analysis
+
+Branch: Analytical Chemistry
+
+Scope:
+- Identification tests
+- Separation methods
+- Chromatography
+- Purity determination
+- Volumetric analysis
+- Quantitative calculations
+- Error minimisation
+- Colorimetry
+- Infrared spectroscopy
+- Mass spectrometry
+- Applications of analytical chemistry
 
 ## Quality Checks
 

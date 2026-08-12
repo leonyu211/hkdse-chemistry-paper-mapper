@@ -1,11 +1,29 @@
 ---
 name: "hkdse-chemistry-paper-mapper"
-description: "Analyse an HKDSE or senior-secondary chemistry question paper and produce a question-by-question table mapping each MCQ and structured question to HKDSE Chemistry chapters, syllabus topics, and assessed concepts. Use when a user provides a chemistry paper plus an HKDSE syllabus/chapter map and asks for topic coverage, chapter analysis, paper blueprinting, or assessment mapping."
+description: "Analyse HKDSE or senior-secondary chemistry question papers by mapping questions to chapters/topics, or generate HKDSE Chemistry extra-exercise worksheets with mark schemes. Use when a user asks for chemistry paper topic coverage, chapter analysis, assessment blueprinting, or syllabus-aligned worksheet generation."
 ---
 
-# HKDSE Chemistry Paper Mapper
+# HKDSE Chemistry Paper Mapper and Worksheet Generator
 
-Use this skill to analyse a senior-secondary / HKDSE Chemistry assessment paper and map every question to HKDSE Chemistry syllabus chapters and topics.
+Use this skill for two related HKDSE Chemistry tasks:
+
+1. **Paper Mapping**: analyse a senior-secondary / HKDSE Chemistry assessment paper and map every question to HKDSE Chemistry syllabus chapters and topics.
+2. **Worksheet Generation**: create syllabus-aligned extra exercises and a separate mark scheme for a selected HKDSE Chemistry chapter or topic.
+
+## Mode Selection
+
+At the start of an ambiguous invocation, ask:
+
+"Which mode would you like to use?
+
+1. Paper Mapping - analyse a question paper and map each question to HKDSE chapters/topics.
+2. Worksheet Generation - create extra exercises and a mark scheme for a selected HKDSE Chemistry chapter/topic."
+
+Stop and wait for the user's choice.
+
+If the user clearly asks to analyse, map, classify, blueprint, or review a paper, use Paper Mapping without asking.
+
+If the user clearly asks to create, generate, practise, make exercises, worksheets, or mark schemes, use Worksheet Generation without asking. For worksheet generation, read [references/worksheet-generation.md](references/worksheet-generation.md) before asking follow-up questions or producing the exercise.
 
 ## Inputs
 
@@ -16,7 +34,7 @@ Expect:
 
 Use a user-supplied syllabus/chapter map as authoritative when it conflicts with the built-in reference below. If no syllabus/chapter map is supplied, use the built-in reference chapter map. Do not invent chapter titles.
 
-## Workflow
+## Paper Mapping Workflow
 
 1. Extract the paper content.
    - For `.docx`, use a document text extractor and, when diagrams/tables matter, render pages or inspect images.

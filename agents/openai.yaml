@@ -1,8 +1,8 @@
 interface:
-  display_name: "HKDSE Chemistry Paper Mapper"
-  short_description: "Map chemistry exam questions to HKDSE chapters"
+  display_name: "HKDSE Chemistry Toolkit"
+  short_description: "Map papers or generate HKDSE chemistry worksheets"
   brand_color: "#2563EB"
-  default_prompt: "Use $hkdse-chemistry-paper-mapper to analyse this chemistry paper and map every question to HKDSE chapters and topics."
+  default_prompt: "Use $hkdse-chemistry-paper-mapper and ask me whether I want Paper Mapping or Worksheet Generation."
 
 policy:
   allow_implicit_invocation: true

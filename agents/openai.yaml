@@ -1,0 +1,8 @@
+interface:
+  display_name: "HKDSE Chemistry Paper Mapper"
+  short_description: "Map chemistry exam questions to HKDSE chapters"
+  brand_color: "#2563EB"
+  default_prompt: "Use $hkdse-chemistry-paper-mapper to analyse this chemistry paper and map every question to HKDSE chapters and topics."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: "hkdse-chemistry-paper-mapper"
-description: "Analyse HKDSE or senior-secondary chemistry question papers by mapping questions to chapters/topics, or generate HKDSE Chemistry extra-exercise worksheets with mark schemes. Use when a user asks for chemistry paper topic coverage, chapter analysis, assessment blueprinting, or syllabus-aligned worksheet generation."
+description: "Analyse HKDSE or senior-secondary chemistry question papers by mapping questions to chapters/topics, or generate HKDSE Chemistry extra-exercise worksheets with mark schemes as self-contained HTML or Unicode plain text. Use when a user asks for chemistry paper topic coverage, chapter analysis, assessment blueprinting, or syllabus-aligned worksheet generation. Never generate DOCX or PDF output."
 ---
 
 # HKDSE Chemistry Paper Mapper and Worksheet Generator
@@ -10,6 +10,15 @@ Use this skill for two related HKDSE Chemistry tasks:
 1. **Paper Mapping**: analyse a senior-secondary / HKDSE Chemistry assessment paper and map every question to HKDSE Chemistry syllabus chapters and topics.
 2. **Worksheet Generation**: create syllabus-aligned extra exercises and a separate mark scheme for a selected HKDSE Chemistry chapter or topic.
 
+## Hard Output Boundary
+
+- Never create, convert to, attach, offer, or recommend `.docx`, Microsoft Word, or PDF output in either mode.
+- Treat an uploaded `.docx` only as an input source to read or analyse. Its format does not determine the output format.
+- Do not invoke document-generation or Word-export tools. A document-reading tool may be used only to extract content from an uploaded question paper.
+- Return Paper Mapping results directly in the conversation as Markdown tables unless the user explicitly asks for one of the supported worksheet formats.
+- For Worksheet Generation, the only permitted outputs are two self-contained `.html` files or Unicode pure text returned directly in the conversation, as defined in [references/worksheet-generation.md](references/worksheet-generation.md).
+- If the user requests DOCX or PDF output, state briefly that this skill supports only HTML or Unicode pure text and ask them to choose one of those two modes. Do not silently substitute a Word file.
+
 ## Mode Selection
 
 At the start of an ambiguous invocation, ask:
@@ -17,7 +26,7 @@ At the start of an ambiguous invocation, ask:
 "Which mode would you like to use?
 
 1. Paper Mapping - analyse a question paper and map each question to HKDSE chapters/topics.
-2. Worksheet Generation - create extra exercises and a mark scheme for a selected HKDSE Chemistry chapter/topic."
+2. Worksheet Generation - create extra exercises and a mark scheme as HTML or Unicode pure text for a selected HKDSE Chemistry chapter/topic."
 
 Stop and wait for the user's choice.
 
@@ -56,6 +65,7 @@ Use a user-supplied syllabus/chapter map as authoritative when it conflicts with
    - Separate MCQs and structured questions.
    - Use Markdown tables.
    - Include an overall coverage summary showing dominant topics and notable cross-topic links.
+   - Return the analysis in the conversation. Do not package it as a DOCX or PDF.
 
 ## Output Format
 

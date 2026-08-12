@@ -2,6 +2,15 @@
 
 Use this mode to create HKDSE Chemistry extra exercises and a separate mark scheme.
 
+## Non-Negotiable Output Contract
+
+The only valid outputs are:
+
+1. Two self-contained `.html` files: one student worksheet and one mark scheme.
+2. Unicode pure text returned directly in the conversation for copying into Apple Notes.
+
+Never create, convert to, attach, offer, or recommend `.docx`, Microsoft Word, PDF, RTF, Pages, or any other document format. Do not use a document-generation tool or Word template. An uploaded Word file may be read as source material, but it must never be used as the output format. If the user requests an unsupported format, ask them to choose HTML or Unicode pure text.
+
 ## First Question
 
 Begin by asking:
@@ -104,6 +113,9 @@ HTML output:
 Unicode Apple Notes output:
 [Available / Not available]
 
+DOCX/PDF output:
+[Not permitted]
+
 Selected mode:
 [Mode A - Colour HTML / Mode B - Unicode pure text]
 
@@ -181,7 +193,7 @@ Do not add empty student writing spaces to the mark scheme.
 
 ## Output Modes
 
-Only two output modes are allowed. Do not create, offer, or recommend PDF output.
+Only two output modes are allowed. Never create, offer, recommend, or convert the result to DOCX, Microsoft Word, PDF, RTF, Pages, or another document format.
 
 ### Mode A - Colour HTML
 
@@ -348,4 +360,5 @@ Before delivery, confirm:
 7. Question numbers and marks match the mark scheme.
 8. Every question has a corresponding answer.
 9. No assessed answer appears in the student worksheet.
-10. No PDF output is created or offered.
+10. No DOCX, Microsoft Word, PDF, RTF, Pages, or other unsupported output is created or offered.
+11. HTML mode produces only `.html` files; Unicode mode returns pure text directly in the conversation.

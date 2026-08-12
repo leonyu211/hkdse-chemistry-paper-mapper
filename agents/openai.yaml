@@ -1,8 +1,8 @@
 interface:
   display_name: "HKDSE Chemistry Toolkit"
-  short_description: "Map papers or generate HKDSE chemistry worksheets"
+  short_description: "Map papers or make HTML/text chemistry worksheets"
   brand_color: "#2563EB"
-  default_prompt: "Use $hkdse-chemistry-paper-mapper and ask me whether I want Paper Mapping or Worksheet Generation."
+  default_prompt: "Use $hkdse-chemistry-paper-mapper and ask whether I want Paper Mapping or Worksheet Generation. For worksheets, output only self-contained HTML or Unicode pure text; never create DOCX or PDF files."
 
 policy:
   allow_implicit_invocation: true

@@ -3,7 +3,9 @@
 A Codex skill for two HKDSE Chemistry workflows:
 
 - Mapping assessment-paper questions to HKDSE chapters and topics
-- Generating syllabus-aligned extra-exercise worksheets with separate mark schemes
+- Generating syllabus-aligned extra-exercise worksheets with separate mark schemes as HTML or Unicode pure text
+
+The skill never creates DOCX or PDF output. Uploaded Word files may be analysed as inputs only.
 
 ## Use
 
